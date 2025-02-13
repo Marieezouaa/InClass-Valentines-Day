@@ -78,3 +78,12 @@ body{
     }
 }
 
+
+.cupid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    animation: fly 5s linear infinite;
+    transform: rotate(20deg);
+}
