@@ -49,3 +49,32 @@ body{
     height: 50px;
     transform: translate(60vw, 10vh);
 }
+
+.fountain {
+    position: absolute;
+    bottom: 0;
+    left:35%;
+    transform: translateX(-50%);
+    width: 100px;
+    animation: fountain 1s linear infinite;
+}
+
+
+.walking-couple {
+    position: absolute;
+    bottom: 20px; 
+    left: -150px; 
+    width: 100px;
+    z-index: 2;
+    animation: walk 10s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        left: 1200px;
+    }
+    100% {
+        right: 100vw;
+    }
+}
+
