@@ -1,0 +1,51 @@
+body{
+    background-image: url("clouds.png");
+    background-size: cover;
+
+}
+.balloon {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.balloon img {
+    position: absolute;
+}
+
+/* Pseudo-random positions */
+#balloon-one {
+    width: 150px;
+    height: 150px;
+    transform: translate(10vw, 20vh);
+}
+
+#balloon-two {
+    width: 150px;
+    height: 150px;
+    transform: translate(50vw, 30vh);
+}
+
+#balloon-three {
+    width: 120px;
+    height: 120px;
+    transform: translate(70vw, 40vh);
+}
+
+#balloon-four {
+    width: 150px;
+    height: 150px;
+    transform: translate(30vw, 60vh);
+}
+
+#balloon-five {
+    width: 50px;
+    height: 50px;
+    transform: translate(20vw, 80vh);
+}
+
+#balloon-six {
+    width: 50px;
+    height: 50px;
+    transform: translate(60vw, 10vh);
+}
