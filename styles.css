@@ -1,8 +1,27 @@
 body{
-    background-image: url("clouds.png");
+    background-image: url("pinkcloud.png");
     background-size: cover;
 
 }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#main-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex; /* Optional: Centers content */
+    align-items: center; /* Optional: Centers vertically */
+    justify-content: center; /* Optional: Centers horizontally */
+    position:relative}
+
+
+
+
 .balloon {
     position: relative;
     width: 100vw;
@@ -48,4 +67,131 @@ body{
     width: 50px;
     height: 50px;
     transform: translate(60vw, 10vh);
+}
+
+
+
+
+@keyframes moveCouple {
+    0% {
+       color: yellow;
+       transform: translate(-355px, 60px);
+       
+    }
+    50% { 
+       transform: translate(0, 60px);
+    }
+    100% {
+       color: red; 
+       transform: translate(0, 0);
+    }
+ }
+
+
+ @keyframes twirlCouple {
+    0% {
+  
+       transform: translate(355px, -60px);
+       
+    }
+    50% { 
+       transform: translate(60px, 0px);
+    }
+    100% {
+   
+       transform: translate(0, 0);
+    }
+ }
+
+
+ @keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } 
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
+/* Vendor prefixes (optional for better compatibility) */
+@-webkit-keyframes spin { 
+    from { 
+        -webkit-transform: rotate(0deg); 
+    } 
+    to { 
+        -webkit-transform: rotate(360deg); 
+    }
+}
+
+@-moz-keyframes spin { 
+    from { 
+        -moz-transform: rotate(0deg); 
+    } 
+    to { 
+        -moz-transform: rotate(360deg); 
+    }
+}
+
+@-ms-keyframes spin { 
+    from { 
+        -ms-transform: rotate(0deg); 
+    } 
+    to { 
+        -ms-transform: rotate(360deg); 
+    }
+}
+
+
+
+
+
+
+
+ #lovely-couple{
+    position: absolute;
+    animation-fill-mode: forwards;
+    animation: twirlCouple 6s 1s;
+    animation: spin 6s 1s;
+
+    animation: spin 3s linear infinite;
+    -webkit-animation: spin 3s linear infinite; /* Safari */
+    -moz-animation: spin 3s linear infinite; /* Firefox */
+    -ms-animation: spin 3s linear infinite; /* IE */
+    
+    transform-origin: center center;
+   
+}
+
+
+
+.roses{
+    transform: rotate(180deg); ;
+}
+
+
+#roses-img{
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+
+
+#roses-img{
+    opacity: 0;
+    animation: new-item-animation 3s linear infinite;
+}
+
+@keyframes new-item-animation {
+    from {
+        opacity: 0;
+        transform: translateY(400px);
+}
+
+    to {
+        opacity: 1;
+        transform : translateY(100%);
+    }
 }
