@@ -195,3 +195,54 @@ body, html {
         transform : translateY(100%);
     }
 }
+
+
+
+
+
+
+
+
+
+.roses {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.rose {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: fall 4s linear infinite;
+}
+
+/* Create multiple roses with different starting positions and delays */
+.rose:nth-child(1) { left: 20%; animation-delay: 0s; }
+.rose:nth-child(2) { left: 40%; animation-delay: 1s; }
+.rose:nth-child(3) { left: 60%; animation-delay: 2s; }
+.rose:nth-child(4) { left: 80%; animation-delay: 1s; }
+
+
+.rose:nth-child(5) { left: 10%; animation-delay: 0s; }
+.rose:nth-child(6) { left: 15%; animation-delay: 1s; }
+.rose:nth-child(7) { left: 25%; animation-delay: 2s; }
+.rose:nth-child(8) { left: 30%; animation-delay: 3s; }
+.rose:nth-child(9) { left: 35%; animation-delay: 0s; }
+.rose:nth-child(10) { left: 45%; animation-delay: 1s; }
+.rose:nth-child(11) { left: 50%; animation-delay: 2s; }
+.rose:nth-child(12) { left: 55%; animation-delay: 1s; }
+
+@keyframes fall {
+    0% {
+        top: 100vh;  /* Start at the bottom */
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: -100px; /* Move off-screen at the top */
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
