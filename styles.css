@@ -20,56 +20,18 @@ body, html {
     position:relative}
 
 
-
-
-.balloon {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-.balloon img {
+#road {
     position: absolute;
+    bottom: 0;  /* Stick to bottom */
+    left: 0;
+    width: 100%;  /* Full screen width */
+    height: 100px;  /* Adjust height for better proportion */
+    background: #333;  /* Dark grey road */
+    border-top: 10px solid #fff;  /* White lane markings */
+    border-bottom: 10px solid #fff; /* Bottom border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Soft shadow for realism */
 }
-
-/* Pseudo-random positions */
-#balloon-one {
-    width: 150px;
-    height: 150px;
-    transform: translate(10vw, 20vh);
-}
-
-#balloon-two {
-    width: 150px;
-    height: 150px;
-    transform: translate(50vw, 30vh);
-}
-
-#balloon-three {
-    width: 120px;
-    height: 120px;
-    transform: translate(70vw, 40vh);
-}
-
-#balloon-four {
-    width: 150px;
-    height: 150px;
-    transform: translate(30vw, 60vh);
-}
-
-#balloon-five {
-    width: 50px;
-    height: 50px;
-    transform: translate(20vw, 80vh);
-}
-
-#balloon-six {
-    width: 50px;
-    height: 50px;
-    transform: translate(60vw, 10vh);
-}
-
-
+    
 
 
 @keyframes moveCouple {
@@ -144,14 +106,12 @@ body, html {
 
 
 
-
-
-
  #lovely-couple{
     position: absolute;
     animation-fill-mode: forwards;
     animation: twirlCouple 6s 1s;
     animation: spin 6s 1s;
+    top: 30px;
 
     animation: spin 3s linear infinite;
     -webkit-animation: spin 3s linear infinite; /* Safari */
@@ -174,9 +134,6 @@ body, html {
     height: 100px;
     width: 100px;
 }
-
-
-
 
 
 
@@ -213,20 +170,16 @@ body, html {
 }
 
 /* Create multiple roses with different starting positions and delays */
-.rose:nth-child(1) { left: 20%; animation-delay: 0s; }
-.rose:nth-child(2) { left: 40%; animation-delay: 1s; }
-.rose:nth-child(3) { left: 60%; animation-delay: 2s; }
-.rose:nth-child(4) { left: 80%; animation-delay: 1s; }
-
-
-.rose:nth-child(5) { left: 10%; animation-delay: 0s; }
-.rose:nth-child(6) { left: 15%; animation-delay: 1s; }
-.rose:nth-child(7) { left: 25%; animation-delay: 2s; }
-.rose:nth-child(8) { left: 30%; animation-delay: 3s; }
-.rose:nth-child(9) { left: 35%; animation-delay: 0s; }
-.rose:nth-child(10) { left: 45%; animation-delay: 1s; }
-.rose:nth-child(11) { left: 50%; animation-delay: 2s; }
-.rose:nth-child(12) { left: 55%; animation-delay: 1s; }
+.rose:nth-child(1) { left: 5%; animation-delay: 0s; }
+.rose:nth-child(2) { left: 15%; animation-delay: 1s; }
+.rose:nth-child(3) { left: 25%; animation-delay: 2s; }
+.rose:nth-child(4) { left: 35%; animation-delay: 3s; }
+.rose:nth-child(5) { left: 45%; animation-delay: 0.5s; }
+.rose:nth-child(6) { left: 55%; animation-delay: 1.5s; }
+.rose:nth-child(7) { left: 65%; animation-delay: 2.5s; }
+.rose:nth-child(8) { left: 75%; animation-delay: 3.5s; }
+.rose:nth-child(9) { left: 85%; animation-delay: 0.3s; }
+.rose:nth-child(10) { left: 95%; animation-delay: 1.2s; }
 
 @keyframes fall {
     0% {
@@ -273,9 +226,24 @@ body, html {
 
 .cupid {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: 1px;
     width: 90px;
     animation: fly 5s linear infinite;
     transform: rotate(20deg);
+}
+
+@keyframes fly {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    50% {
+        top: 50px;
+        left: 50px;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
 }
