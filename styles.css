@@ -159,6 +159,7 @@ body, html {
     -ms-animation: spin 3s linear infinite; /* IE */
     
     transform-origin: center center;
+    z-index: 2;
    
 }
 
@@ -195,13 +196,6 @@ body, html {
         transform : translateY(100%);
     }
 }
-
-
-
-
-
-
-
 
 
 .roses {
@@ -245,4 +239,43 @@ body, html {
         opacity: 1;
         transform: rotate(360deg);
     }
+}
+
+
+.fountain {
+    position: absolute;
+    bottom: 0;
+    left:35%;
+    transform: translateX(-50%);
+    width: 100px;
+    animation: fountain 1s linear infinite;
+}
+
+
+.walking-couple {
+    position: absolute;
+    bottom: 20px; 
+    left: -150px; 
+    width: 100px;
+    z-index: 2;
+    animation: walk 10s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        left: 1200px;
+    }
+    100% {
+        right: 100vw;
+    }
+}
+
+
+.cupid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    animation: fly 5s linear infinite;
+    transform: rotate(20deg);
 }
